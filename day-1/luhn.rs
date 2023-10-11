@@ -2,7 +2,54 @@
 #![allow(unused_variables, dead_code)]
 
 pub fn luhn(cc_number: &str) -> bool {
-    unimplemented!()
+    // Ignore all spaces
+    let num: String = cc_number
+        .chars()
+        .filter(|c| !c.is_whitespace())
+        .rev()
+        .collect::<String>();
+
+    // Reject number with less than two digits
+    if num.len() < 2 {
+        return false;
+    }
+
+    // Reject number with non-digit characters
+    if let Err(_) = num.parse::<u64>() {
+        return false;
+    }
+
+    // Moving from right to left, double every second digit
+    let doubled = num.clone() // TODO: we should avoid cloning here
+        .chars()
+        .enumerate()
+        .filter_map(|(i, n)| {
+            if i % 2 == 0 { return None };
+            let d: u32 = n.to_digit(10).unwrap() * 2;
+            if d < 10 {
+                Some(d)
+            } else {
+                // sum the digits if the result is greater than 9
+                let sd = d.to_string()
+                    .chars()
+                    .into_iter()
+                    .map(|n| n.to_digit(10).unwrap())
+                    .sum();
+                Some(sd)
+            }
+        })
+        .sum::<u32>();
+
+    let undoubled = num
+        .chars()
+        .enumerate()
+        .filter_map(|(i, n)| {
+            if i % 2 != 0 { return None };
+            return Some(n.to_digit(10).unwrap())
+        })
+        .sum::<u32>();
+
+    (doubled + undoubled).to_string().chars().last().unwrap() == '0'
 }
 
 #[test]
