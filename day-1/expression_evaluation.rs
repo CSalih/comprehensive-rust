@@ -29,11 +29,35 @@ enum Res {
     /// Evaluation failed, with the given error message.
     Err(String),
 }
+
 // Allow `Ok` and `Err` as shorthands for `Res::Ok` and `Res::Err`.
 use Res::{Err, Ok};
 
 fn eval(e: Expression) -> Res {
-    todo!()
+    let result = match e {
+        Expression::Op { op, left, right } => {
+            let Ok(left) = eval(*left) else {
+                return Err("unknown eval err".to_string())
+            };
+            let Ok(right) = eval(*right) else {
+                return Err("unknown eval err".to_string())
+            };
+
+            match op {
+                Operation::Add => left.checked_add(right).ok_or(String::from("integer overflow")),
+                Operation::Sub => left.checked_sub(right).ok_or(String::from("integer overflow")),
+                Operation::Mul => left.checked_mul(right).ok_or(String::from("integer overflow")),
+                Operation::Div if right == 0  => Result::Err(String::from("division by zero")),
+                Operation::Div => left.checked_div(right).ok_or(String::from("integer overflow")),
+            }
+        },
+        Expression::Value(v) => Result::Ok(v)
+    };
+
+    match result {
+        Result::Ok(value) => Ok(value),
+        Result::Err(err) => Err(err)
+    }
 }
 
 #[test]
@@ -88,5 +112,17 @@ fn test_error() {
             right: Box::new(Expression::Value(0)),
         }),
         Err(String::from("division by zero"))
+    );
+}
+
+#[test]
+fn test_integer_overflow() {
+    assert_eq!(
+        eval(Expression::Op {
+            op: Operation::Add,
+            left: Box::new(Expression::Value(i64::MAX)),
+            right: Box::new(Expression::Value(1)),
+        }),
+        Err(String::from("integer overflow"))
     );
 }
