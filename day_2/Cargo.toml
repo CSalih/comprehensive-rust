@@ -6,3 +6,7 @@ edition = "2021"
 [[bin]]
 name = "d2_iterators-and-ownership"
 path = "iterators_ownership.rs"
+
+[lib]
+name = "d2_strings_iterators"
+path = "strings_iterators.rs"
