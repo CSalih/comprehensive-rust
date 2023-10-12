@@ -1,0 +1,8 @@
+[package]
+name = "day_2"
+version = "0.1.0"
+edition = "2021"
+
+[[bin]]
+name = "d2_iterators-and-ownership"
+path = "iterators_ownership.rs"
