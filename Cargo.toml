@@ -1,16 +1,3 @@
-[package]
-name = "comprehensive-rust-solutions"
-version = "0.1.0"
-edition = "2021"
-
-[[bin]]
-name = "d1-luhn"
-path = "day_1/luhn.rs"
-
-[lib]
-name = "d1_expression_evaluation"
-path = "day_1/expression_evaluation.rs"
-
-[[bin]]
-name = "d2_iterators-and-ownership"
-path = "day_2/iterators_ownership.rs"
+[workspace]
+members = ["day_1", "day_2"]
+resolver = "2"

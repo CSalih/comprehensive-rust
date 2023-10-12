@@ -1,0 +1,12 @@
+[package]
+name = "day_1"
+version = "0.1.0"
+edition = "2021"
+
+[[bin]]
+name = "d1-luhn"
+path = "luhn.rs"
+
+[lib]
+name = "d1_expression_evaluation"
+path = "expression_evaluation.rs"
