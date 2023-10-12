@@ -5,12 +5,12 @@ edition = "2021"
 
 [[bin]]
 name = "d1-luhn"
-path = "day-1/luhn.rs"
+path = "day_1/luhn.rs"
 
 [lib]
 name = "d1_expression_evaluation"
-path = "day-1/expression_evaluation.rs"
+path = "day_1/expression_evaluation.rs"
 
 [[bin]]
 name = "d2_iterators-and-ownership"
-path = "day-2/iterators-and-ownership.rs"
+path = "day_2/iterators_ownership.rs"
