@@ -1,8 +1,8 @@
 [package]
-name = "day_1_geo"
+name = "geometry"
 version = "0.1.0"
 edition = "2021"
 
 [[bin]]
-name = "d1-geo"
+name = "geometry"
 path = "geometry.rs"

@@ -1,20 +1,20 @@
 [package]
-name = "day_2"
+name = "legacy"
 version = "0.1.0"
 edition = "2021"
 
 [[bin]]
-name = "d2_book_library"
+name = "legacy_book_library"
 path = "book_library.rs"
 
 [[bin]]
-name = "d2_health_statistics"
+name = "legacy_health_statistics"
 path = "health_statistics.rs"
 
 [[bin]]
-name = "d2_iterators-and-ownership"
+name = "legacy_iterators-and-ownership"
 path = "iterators_ownership.rs"
 
 [lib]
-name = "d2_strings_iterators"
+name = "legacy_strings_iterators"
 path = "strings_iterators.rs"
