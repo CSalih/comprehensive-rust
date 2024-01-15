@@ -1,3 +1,12 @@
 [workspace]
-members = ["day_1", "day_1/fib", "day_1/collatz", "day_1/nested_arrays", "day_1/geometry", "day_1/expr_eval", "day_2", "day_3"]
+members = [
+    "day_1",
+    "day_1/fib",
+    "day_1/collatz",
+    "day_1/nested_arrays",
+    "day_1/geometry",
+    "day_1/expr_eval",
+    "day_2",
+    "day_3"
+]
 resolver = "2"
