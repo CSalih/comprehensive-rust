@@ -1,0 +1,8 @@
+[package]
+name = "day_2_generic_min"
+version = "0.1.0"
+edition = "2021"
+
+[[bin]]
+name = "d2-generic_min"
+path = "generic_min.rs"
