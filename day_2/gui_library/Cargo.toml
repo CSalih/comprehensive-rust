@@ -1,0 +1,8 @@
+[package]
+name = "day_2_gui_library"
+version = "0.1.0"
+edition = "2021"
+
+[[bin]]
+name = "d1-nst-arr"
+path = "gui_library.rs"

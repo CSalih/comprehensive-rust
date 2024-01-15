@@ -6,6 +6,7 @@ members = [
     "day_1/nested_arrays",
     "day_1/geometry",
     "day_2",
-    "day_2/expr_eval"
+    "day_2/expr_eval",
+    "day_2/gui_library"
 ]
 resolver = "2"
