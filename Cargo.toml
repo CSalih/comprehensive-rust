@@ -7,6 +7,7 @@ members = [
     "day_1/geometry",
     "day_2/expr_eval",
     "day_2/gui_library",
-    "day_4/luhn"
+    "day_2/generic_min",
+    "day_4/luhn",
 ]
 resolver = "2"
