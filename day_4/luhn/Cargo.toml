@@ -1,8 +1,8 @@
 [package]
-name = "day_1"
+name = "luhn"
 version = "0.1.0"
 edition = "2021"
 
 [[bin]]
-name = "d1-luhn"
+name = "luhn"
 path = "luhn.rs"
