@@ -1,0 +1,8 @@
+[package]
+name = "day_1_expr_eval"
+version = "0.1.0"
+edition = "2021"
+
+[[bin]]
+name = "d1-expr_eval"
+path = "expr_eval.rs"

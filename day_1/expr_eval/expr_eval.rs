@@ -37,26 +37,34 @@ fn eval(e: Expression) -> Res {
     let result = match e {
         Expression::Op { op, left, right } => {
             let Ok(left) = eval(*left) else {
-                return Err("unknown eval err".to_string())
+                return Err("unknown eval err".to_string());
             };
             let Ok(right) = eval(*right) else {
-                return Err("unknown eval err".to_string())
+                return Err("unknown eval err".to_string());
             };
 
             match op {
-                Operation::Add => left.checked_add(right).ok_or(String::from("integer overflow")),
-                Operation::Sub => left.checked_sub(right).ok_or(String::from("integer overflow")),
-                Operation::Mul => left.checked_mul(right).ok_or(String::from("integer overflow")),
-                Operation::Div if right == 0  => Result::Err(String::from("division by zero")),
-                Operation::Div => left.checked_div(right).ok_or(String::from("integer overflow")),
+                Operation::Add => left
+                    .checked_add(right)
+                    .ok_or(String::from("integer overflow")),
+                Operation::Sub => left
+                    .checked_sub(right)
+                    .ok_or(String::from("integer overflow")),
+                Operation::Mul => left
+                    .checked_mul(right)
+                    .ok_or(String::from("integer overflow")),
+                Operation::Div if right == 0 => Result::Err(String::from("division by zero")),
+                Operation::Div => left
+                    .checked_div(right)
+                    .ok_or(String::from("integer overflow")),
             }
-        },
-        Expression::Value(v) => Result::Ok(v)
+        }
+        Expression::Value(v) => Result::Ok(v),
     };
 
     match result {
         Result::Ok(value) => Ok(value),
-        Result::Err(err) => Err(err)
+        Result::Err(err) => Err(err),
     }
 }
 
