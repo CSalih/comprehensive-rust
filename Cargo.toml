@@ -1,10 +1,10 @@
 [workspace]
 members = [
+    "legacy",
     "day_1/fib",
     "day_1/collatz",
     "day_1/nested_arrays",
     "day_1/geometry",
-    "day_2",
     "day_2/expr_eval",
     "day_2/gui_library",
     "day_4/luhn"
