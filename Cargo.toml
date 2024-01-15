@@ -8,6 +8,7 @@ members = [
     "day_2/expr_eval",
     "day_2/gui_library",
     "day_2/generic_min",
+    "day_3/builder_type",
     "day_4/luhn",
 ]
 resolver = "2"
