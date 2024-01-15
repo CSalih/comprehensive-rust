@@ -1,8 +1,8 @@
 [package]
-name = "day_1_collatz"
+name = "collatz"
 version = "0.1.0"
 edition = "2021"
 
 [[bin]]
-name = "d1-collatz"
+name = "collatz"
 path = "collatz.rs"

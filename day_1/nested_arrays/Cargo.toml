@@ -1,8 +1,8 @@
 [package]
-name = "day_1_nst_arr"
+name = "nested_arrays"
 version = "0.1.0"
 edition = "2021"
 
 [[bin]]
-name = "d1-nst-arr"
+name = "nested_arrays"
 path = "nested_arrays.rs"

@@ -1,8 +1,8 @@
 [package]
-name = "day_2_expr_eval"
+name = "expr_eval"
 version = "0.1.0"
 edition = "2021"
 
 [[bin]]
-name = "d2-expr_eval"
+name = "expr_eval"
 path = "expr_eval.rs"
