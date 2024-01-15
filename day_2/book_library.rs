@@ -26,9 +26,7 @@ impl Book {
 // - `self` for unique access by value.
 impl Library {
     fn new() -> Library {
-        Library {
-            books: Vec::new(),
-        }
+        Library { books: Vec::new() }
     }
 
     fn len(&self) -> usize {
@@ -50,9 +48,7 @@ impl Library {
     }
 
     fn oldest_book(&self) -> Option<&Book> {
-        self.books.iter().min_by(|a, b| {
-            a.year.cmp(&b.year)
-        })
+        self.books.iter().min_by(|a, b| a.year.cmp(&b.year))
     }
 }
 

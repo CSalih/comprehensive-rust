@@ -61,12 +61,10 @@ impl User {
             patient_name: self.name.as_str(),
             height_change: 0f32,
             blood_pressure_change: match self.last_blood_pressure {
-                Some((systolic, diastolic)) => {
-                    Some((
-                        measurements.blood_pressure.0 as i32 - systolic as i32,
-                        measurements.blood_pressure.1 as i32 - diastolic as i32,
-                    ))
-                }
+                Some((systolic, diastolic)) => Some((
+                    measurements.blood_pressure.0 as i32 - systolic as i32,
+                    measurements.blood_pressure.1 as i32 - diastolic as i32,
+                )),
                 None => None,
             },
         };

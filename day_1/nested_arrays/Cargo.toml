@@ -1,0 +1,8 @@
+[package]
+name = "day_1_nst_arr"
+version = "0.1.0"
+edition = "2021"
+
+[[bin]]
+name = "d1-nst-arr"
+path = "nested_arrays.rs"

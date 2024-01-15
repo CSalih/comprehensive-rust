@@ -1,8 +1,8 @@
 [package]
-name = "day_1"
+name = "day_1_fib"
 version = "0.1.0"
 edition = "2021"
 
 [[bin]]
-name = "d1-luhn"
-path = "luhn.rs"
+name = "d1-fib"
+path = "fib.rs"
