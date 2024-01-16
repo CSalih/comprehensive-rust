@@ -8,10 +8,6 @@ name = "legacy_book_library"
 path = "book_library.rs"
 
 [[bin]]
-name = "legacy_health_statistics"
-path = "health_statistics.rs"
-
-[[bin]]
 name = "legacy_iterators-and-ownership"
 path = "iterators_ownership.rs"
 

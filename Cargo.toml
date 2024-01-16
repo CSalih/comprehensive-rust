@@ -10,6 +10,7 @@ members = [
     "day_2/generic_min",
     "day_3/builder_type",
     "day_3/binary_tree",
+    "day_3/health_statistics",
     "day_4/luhn",
 ]
 resolver = "2"
