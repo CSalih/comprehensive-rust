@@ -14,5 +14,6 @@ members = [
     "day_4/luhn",
     "day_4/iter_chaining",
     "day_4/gui_library",
+    "day_4/rewriting_result",
 ]
 resolver = "2"
