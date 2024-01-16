@@ -1,0 +1,8 @@
+[package]
+name = "iter_chaining"
+version = "0.1.0"
+edition = "2021"
+
+[[bin]]
+name = "iter_chaining"
+path = "iter_chaining.rs"
