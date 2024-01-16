@@ -13,5 +13,6 @@ members = [
     "day_3/health_statistics",
     "day_4/luhn",
     "day_4/iter_chaining",
+    "day_4/gui_library",
 ]
 resolver = "2"
