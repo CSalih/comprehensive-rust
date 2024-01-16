@@ -12,5 +12,6 @@ members = [
     "day_3/binary_tree",
     "day_3/health_statistics",
     "day_4/luhn",
+    "day_4/iter_chaining",
 ]
 resolver = "2"
