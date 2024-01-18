@@ -1,0 +1,12 @@
+[package]
+name = "rewriteing_result"
+version = "0.1.0"
+edition = "2021"
+
+[[bin]]
+name = "rewriteing_result"
+path = "rewriteing_result.rs"
+
+[dependencies]
+thiserror = "1.0.56"
+anyhow = "1.0.79"
