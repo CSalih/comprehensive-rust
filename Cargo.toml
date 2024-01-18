@@ -15,5 +15,6 @@ members = [
     "day_4/iter_chaining",
     "day_4/gui_library",
     "day_4/rewriting_result",
+    "day_4/ffi_wrapper",
 ]
 resolver = "2"

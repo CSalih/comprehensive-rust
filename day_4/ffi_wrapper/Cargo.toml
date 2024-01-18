@@ -1,0 +1,10 @@
+[package]
+name = "ffi_wrapper"
+version = "0.1.0"
+edition = "2021"
+
+[[bin]]
+name = "ffi_wrapper"
+path = "ffi_wrapper.rs"
+[dependencies]
+libc = "0.2.152"
