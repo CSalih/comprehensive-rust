@@ -16,5 +16,6 @@ members = [
     "day_4/gui_library",
     "day_4/rewriting_result",
     "day_4/ffi_wrapper",
+    "concurrency/dining_philosophers",
 ]
 resolver = "2"
