@@ -17,5 +17,6 @@ members = [
     "day_4/rewriting_result",
     "day_4/ffi_wrapper",
     "concurrency/dining_philosophers",
+    "concurrency/link_checker",
 ]
 resolver = "2"
